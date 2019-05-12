@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clear:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	perspective: 1000px;
+}
+.san{
+	width: 1000px;
+	height: 1000px;
+	margin: 0 auto;
+	
+}
+.big{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: calc(50% - 100px);
+	top:calc(50% - 100px);
+	transform-style: preserve-3d;
+	animation: xuanzhuan 4s infinite normal linear;
+}
+@keyframes xuanzhuan{
+	from{
+		transform: rotate3d(1,0,0,15deg) rotate3d(0,1,0,0deg);
+		}
+	to{
+		transform:rotate3d(1,0,0,15deg) rotate3d(0,1,0,360deg);	
+	}
+}
+.big .item{
+	width: 200px;
+	height: 200px;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.2;
+	transition: all 1s ease;
+	
+}
+.big .front{
+	background-image: url(../img/01.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: translateZ(100px);
+}
+.big:hover .tomax1{
+	opacity: 0.9;
+	transform: translateZ(300px) scale(1.5);
+}
+.big .back{
+	background-image: url(../img/02.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: translateZ(-100px);
+}
+.big:hover .tomax2{
+	opacity: 0.9;
+	transform: translateZ(-300px) scale(1.5);
+}
+.big .left{
+	background-image: url(../img/03.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateY(-90deg) translateZ(100px);
+}
+.big:hover .tomax3{
+	opacity: 0.9;
+	transform: rotateY(-90deg) translateZ(300px) scale(1.5);
+}
+.big .right{
+	background-image: url(../img/04.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateY(90deg) translateZ(100px);
+}
+.big:hover .tomax4{
+	opacity: 0.9;
+	transform:rotateY(90deg) translateZ(300px) scale(1.5);
+}
+.big .top{
+	background-image: url(../img/05.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateX(90deg) translateZ(100px);
+}
+.big:hover .tomax5{
+	opacity: 0.9;
+	transform: rotateX(90deg) translateZ(300px) scale(1.5);
+}
+.big .botoom{
+	background-image: url(../img/06.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateX(-90deg) translateZ(100px);
+}
+.big:hover .tomax6{
+	opacity: 0.9;
+	transform: rotateX(-90deg) translateZ(300px) scale(1.5);
+}
+.small{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: calc(50% - 50px);
+	top:calc(50% - 50px);
+	transform-style: preserve-3d;
+}
+.small .item{
+	width: 100px;
+	height: 100px;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+}
+.small .front{
+	background-image: url(../img/01.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: translateZ(50px);
+}
+.small .back{
+	background-image: url(../img/02.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: translateZ(-50px);
+}
+.small .left{
+	background-image: url(../img/03.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateY(-90deg) translateZ(50px);
+}
+.small .right{
+	background-image: url(../img/04.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateY(90deg) translateZ(50px);
+}
+.small .top{
+	background-image: url(../img/05.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateX(90deg) translateZ(50px);
+}
+.small .botoom{
+	background-image: url(../img/06.jpg);
+	background-size: cover;
+	background-position: center;
+	transform: rotateX(-90deg) translateZ(50px);
+}
